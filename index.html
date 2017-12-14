@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="initial-scale=1.0,width=device-width,maximum-scale=1, user-scalable=no">
+<title>module-demo</title>
+
+<!-- 第三方依赖 start -->
+<!-- angularjs依赖 -->
+<script type="text/javascript" src="lib/angular.min.js"></script>
+<!-- 基于angularjs的路由依赖 -->
+<script type="text/javascript" src="lib/angular-ui-router.js"></script>
+<!-- 基于angularjs的css模块化依赖 -->
+<script type="text/javascript" src="lib/angular-css.min.js"></script>
+<!-- jquery依赖 -->
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<!-- 第三方依赖 code -->
+
+<!-- 业务依赖 start -->
+<!-- 主配置入口 -->
+<script type="text/javascript" src="config/app.config.js"></script>
+<!-- 模块依赖 -->
+<script type="text/javascript" src="module/module1/module1.js"></script>
+<script type="text/javascript" src="module/module2/module2.js"></script>
+<!-- 业务依赖 end -->
+
+</head>
+<body>
+	<div>
+		<span>header</span>
+		<p>this is the header area.</p>
+	</div>
+
+	<hr>
+
+	<div>
+		<span>content</span>
+		<!-- 此处为模块内容显示区域 -->
+		<div class="container" ui-view="" ng-cloak></div>
+	</div>
+
+	<hr>
+
+	<div>
+		<span>footer</span>
+		<p>this is the footer area.</p>
+		<ul>
+			<li><div>
+					<a href="/">首页</a>
+				</div></li>
+			<li><div>
+					<a href="#" ui-sref="module1">module1</a>
+				</div></li>
+			<li><div>
+					<a href="#" ui-sref="module2">module2</a>
+				</div></li>
+		</ul>
+	</div>
+</body>
+</html>
