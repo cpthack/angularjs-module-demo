@@ -12,14 +12,14 @@
 > 命令操作示例
 
 ```
-	cd /Users/cptahck/git/angularjs-module-demo
-	npm install connect
-	npm install serve-static
+cd /Users/cptahck/git/angularjs-module-demo
+npm install connect
+npm install serve-static
 ```
 #### 3、运行代码
 > 命令操作示例
 
 ```
-	cd /Users/cptahck/git/angularjs-module-demo
-	node start.js
+cd /Users/cptahck/git/angularjs-module-demo
+node start.js
 ```
