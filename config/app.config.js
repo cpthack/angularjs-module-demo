@@ -3,7 +3,9 @@
  */
 var allModule = [ 'ui.router', 'angularCSS', 'module1', 'module2' ];
 
-angular.module('myApp', allModule).config(
+var app = angular.module('myApp', allModule);
+
+app.config(
 		function($stateProvider, $urlRouterProvider, $locationProvider) {
 			/**
 			 * 可以去除#号路由来访问，如果需要直接访问路由有效，则需针对应用容器进行额外配置
@@ -13,3 +15,5 @@ angular.module('myApp', allModule).config(
 			$urlRouterProvider.otherwise('/');
 
 		});
+
+app.constant('ENV', '');
