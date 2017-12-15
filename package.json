@@ -1,0 +1,18 @@
+{
+	"name": "angularjs-module-demo",
+	"version": "1.0.0",
+	"description": "基于node.js、angularjs的模块化demo.",
+	"main": "index.js",
+	"scripts": {
+		"start": "node start.js"
+	},
+	"author": "cpthack",
+	"license": "",
+	"devDependencies": {
+		
+	},
+	"dependencies": {
+		"express": "4.16.2",
+		"serve-static": "1.13.1"
+	}
+}

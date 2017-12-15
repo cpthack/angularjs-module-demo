@@ -13,8 +13,7 @@
 
 ```
 cd /Users/cptahck/git/angularjs-module-demo
-npm install express
-npm install serve-static
+npm install
 ```
 #### 3、运行代码
 > 命令操作示例
@@ -22,4 +21,6 @@ npm install serve-static
 ```
 cd /Users/cptahck/git/angularjs-module-demo
 node start.js
+或者 
+npm start
 ```
