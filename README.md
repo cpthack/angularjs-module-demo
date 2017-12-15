@@ -13,7 +13,7 @@
 
 ```
 cd /Users/cptahck/git/angularjs-module-demo
-npm install connect
+npm install express
 npm install serve-static
 ```
 #### 3、运行代码

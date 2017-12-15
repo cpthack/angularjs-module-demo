@@ -1,7 +1,18 @@
-var connect = require("connect");
+var express = require('express');
+var app = express();
+
 var serveStatic = require("serve-static");
 
-var app = connect();
-app.use(serveStatic("/Users/cptahck/git/angularjs-module-demo"));
+var projectDir = __dirname;
+var serverPort = 5000;
 
-app.listen(5000);
+app.use(serveStatic(projectDir));// 处理静态文件
+
+app.use("/", function(req, res) { // 处理Angularjs H5路由
+	console.log("req.url = " + req.url);
+	res.sendfile(projectDir + '/index.html');
+})
+
+var server = app.listen(serverPort);
+console.log("start server port=[%d],projectDir=[%s] successfully.", serverPort,
+		projectDir);
