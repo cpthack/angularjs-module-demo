@@ -7,12 +7,12 @@ module1.config(function($stateProvider,$urlRouterProvider) {
 	
 	$stateProvider.state('module1', {
 		url : '/module1',
-		css : 'module/module1/module1.css',
-		templateUrl: 'module/module1/module1.html',
+		css : 'modules/module1/module1.css',
+		templateUrl: 'modules/module1/module1.html',
 		controller:'module1Controller',
 		resolve: {
             loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad){
-                return $ocLazyLoad.load('module/module1/module1Controller.js')
+                return $ocLazyLoad.load('modules/module1/module1.controller.js')
             }]
         }
 	})
