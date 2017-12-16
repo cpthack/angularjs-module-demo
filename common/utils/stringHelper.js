@@ -1,9 +1,9 @@
 /**
- * 字符串相关工具类
+ * 字符串操作辅助工具服务
  */
-var stringHelper = angular.module("common.utils", []);
+var commonUtils = angular.module("common.utils", []);
 
-stringHelper.service('stringHelper', function() {
+commonUtils.service('stringHelper', function() {
 
 	this.isEmpty = function(str) {
 		return str == null || str == '' || typeof str == undefined;
