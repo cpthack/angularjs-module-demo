@@ -1,7 +1,7 @@
 var module1 = angular.module('module1', [ "common.utils" ]);
 
-module1.controller('module1Controller', [ '$scope', "$state", "StringHelper",
-		function($scope, $state, StringHelper) {
+module1.controller('module1Controller', [ '$scope', "$state", "stringHelper",
+		function($scope, $state, stringHelper) {
 
 			$scope.moduleName = "module1";
 
@@ -16,7 +16,7 @@ module1.controller('module1Controller', [ '$scope', "$state", "StringHelper",
 			};
 
 			$scope.test = function() {
-				console.log(StringHelper.isEmpty(""));
+				console.log(stringHelper.isEmpty(""));
 			};
 
 		} ]);

@@ -13,7 +13,7 @@ module1.config(function($stateProvider,$urlRouterProvider) {
 		resolve: {
             loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad){
             	
-            	$ocLazyLoad.load('common/utils/StringHelper.js');
+            	$ocLazyLoad.load('common/utils/stringHelper.js');
             	
                 return $ocLazyLoad.load('modules/module1/module1.controller.js')
             }]

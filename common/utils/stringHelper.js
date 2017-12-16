@@ -1,9 +1,9 @@
 /**
  * 字符串相关工具类
  */
-var StringHelper = angular.module("common.utils", []);
+var stringHelper = angular.module("common.utils", []);
 
-StringHelper.service('StringHelper', function() {
+stringHelper.service('stringHelper', function() {
 
 	this.isEmpty = function(str) {
 		return str == null || str == '' || typeof str == undefined;
