@@ -2,6 +2,19 @@
 	<div>
 		<span>my name is {{moduleName}}.</span>
 		<p></p>
+		<input type="button" value="ng-repeat" ng-click="testNgReapeat()">
 		<input type="button" value="test" ng-click="test()">
+	</div>
+	<div>
+		<table>
+			<tr>
+				<td>name</td>
+				<td>descp</td>
+			</tr>
+			<tr ng-repeat="item in testRepeat">
+				<td ng-bind="item.name"></td>
+				<td ng-bind="item.descp"></td>
+			</tr>
+		</table>
 	</div>
 </div>

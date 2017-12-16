@@ -1,11 +1,22 @@
-var module1 = angular.module('module1', ['oc.lazyLoad']);
+var module1 = angular.module('module1', [ "common.utils" ]);
 
-module1.controller('module1Controller', [ '$scope', "$state",
-		function($scope, $state) {
-		    
+module1.controller('module1Controller', [ '$scope', "$state", "StringHelper",
+		function($scope, $state, StringHelper) {
+
 			$scope.moduleName = "module1";
+
+			$scope.testNgReapeat = function() {
+				$scope.testRepeat = [ {
+					"name" : "cpthack1",
+					"descp" : "test1"
+				}, {
+					"name" : "cpthack2",
+					"descp" : "test2"
+				} ];
+			};
+
 			$scope.test = function() {
-				alert("my name is test of " + $scope.moduleName + ".");
+				console.log(StringHelper.isEmpty(""));
 			};
 
 		} ]);

@@ -1,4 +1,4 @@
-var module2 = angular.module('module2', []);
+var module2 = angular.module('module2');
 
 module2.controller('module2Controller',
 		[ '$scope', "$state", function($scope, $state) {
