@@ -31,6 +31,9 @@ npm start
 
 ```
 /angularjs-module-demo            -->项目根目录
+    /common                       -->项目公共模块
+       /utils                     -->公共的工具服务
+       /service                   -->公共的业务逻辑服务
     /config                       -->配置相关
     /lib                          -->项目使用的第三方库文件夹
     /css                          --全局的项目css样式文件夹
