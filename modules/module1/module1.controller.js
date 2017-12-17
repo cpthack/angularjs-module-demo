@@ -1,8 +1,8 @@
-var module1 = angular.module('module1', [ "common.utils" ]);
+var module1 = angular.module('module1', [ "common.utils","common.service"]);
 
-module1.controller('module1Controller', [ '$scope', "$state", "stringHelper",
-		"httpHelper", function($scope, $state, stringHelper, httpHelper) {
-
+module1.controller('module1Controller', [ '$scope', "$state",'$injector','$ocLazyLoad', "stringHelper",
+		"httpService", function($scope, $state,$injector, $ocLazyLoad,stringHelper, httpService) {
+			
 			$scope.moduleName = "module1";
 			
 			//测试ng-repeat
@@ -15,12 +15,21 @@ module1.controller('module1Controller', [ '$scope', "$state", "stringHelper",
 					"descp" : "test2"
 				} ];
 			};
-
+			
 			$scope.testString = function() {
 				console.log(stringHelper.isEmpty(""));
+				var result  = httpService.sendHttp({
+					url:"http://127.0.0.1:5000/rest/api/get"
+				});
+				console.log(result);
 			};
 			
-			//测试 GET请求
+			var httpHelper;
+			$ocLazyLoad.load(['common/utils/common.utils.module.js','common/utils/httpHelper.js']).then(function(){
+				httpHelper = $injector.get("httpHelper");//手动注入对象
+			});
+			
+			//测试GET请求
 			$scope.testGet = function() {
 				var result = "";
 				var data = {

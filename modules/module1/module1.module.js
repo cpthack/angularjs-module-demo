@@ -14,7 +14,8 @@ module1.config(function($stateProvider,$urlRouterProvider) {
             loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad){
             	
             	$ocLazyLoad.load('common/utils/stringHelper.js');
-            	$ocLazyLoad.load('common/utils/httpHelper.js');
+            	//$ocLazyLoad.load('common/utils/httpHelper.js');
+            	$ocLazyLoad.load('common/service/httpService.js');
             	
                 return $ocLazyLoad.load('modules/module1/module1.controller.js')
             }]
