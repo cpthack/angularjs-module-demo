@@ -20,7 +20,7 @@ app.post('/rest/api/post', function (req, res) {
 app.put('/rest/api/put', function (req, res) {
 	res.json({"result":{message:"put successfully."}});
 });
-app.post('/rest/api/delete', function (req, res) {
+app.delete('/rest/api/delete', function (req, res) {
 	res.json({"result":{message:"delete successfully."}});
 });
 

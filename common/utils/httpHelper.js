@@ -11,9 +11,7 @@ commonUtils.service('httpHelper', function($http) {
 			if (options.url.indexOf("?") < 0) {
 				data = "?";
 			}
-			for ( var key in options.data) {
-				data = data + '' + key + '=' + options.data[key] + '&';
-			}
+			data = data+$.param(options.data);
 			options.url += data;
 		}
 		this.sendHttp(options);
