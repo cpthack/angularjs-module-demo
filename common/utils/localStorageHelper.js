@@ -1,8 +1,6 @@
 /**
  * 本地存储数据操作辅助工具服务
  */
-var commonUtils = angular.module("common.utils", []);
-
 commonUtils.service('localStorage', [ "$window", function() {
 
 	// 存储单个基础数据类型值
