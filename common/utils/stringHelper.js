@@ -1,8 +1,6 @@
 /**
  * 字符串操作辅助工具服务
  */
-var commonUtils = angular.module("common.utils", []);
-
 commonUtils.service('stringHelper', function() {
 
 	this.isEmpty = function(str) {
