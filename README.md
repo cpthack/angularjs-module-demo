@@ -35,6 +35,9 @@ npm start
        /utils                     -->公共的工具服务
        /service                   -->公共的业务逻辑服务
     /config                       -->配置相关
+    /mock                         -->模拟后端数据服务
+       /xxx.json                  -->具体的mock数据文件
+       /README.md                 -->mock指导文档
     /lib                          -->项目使用的第三方库文件夹
     /css                          --全局的项目css样式文件夹
     /js                           --全局的项目js文件夹
