@@ -1,7 +1,7 @@
 var module1 = angular.module('module1', [ "common.utils","common.service"]);
 
-module1.controller('module1Controller', [ '$scope', "$state",'$injector','$ocLazyLoad', "stringHelper",
-		"httpService", function($scope, $state,$injector, $ocLazyLoad,stringHelper, httpService) {
+module1.controller('module1Controller', [ '$scope', "$state",'$injector','$ocLazyLoad', "stringHelper","httpHelper",
+		"httpService", function($scope, $state,$injector, $ocLazyLoad,stringHelper,httpHelper,httpService) {
 			
 			$scope.moduleName = "module1";
 			
@@ -24,10 +24,10 @@ module1.controller('module1Controller', [ '$scope', "$state",'$injector','$ocLaz
 				console.log(result);
 			};
 			
-			var httpHelper;
-			$ocLazyLoad.load(['common/utils/common.utils.module.js','common/utils/httpHelper.js']).then(function(){
-				httpHelper = $injector.get("httpHelper");//手动注入对象
-			});
+//			var httpHelper;
+//			$ocLazyLoad.load(['common/utils/common.utils.module.js','common/utils/httpHelper.js']).then(function(){
+//				httpHelper = $injector.get("httpHelper");//手动注入对象
+//			});
 			
 			//测试GET请求
 			$scope.testGet = function() {

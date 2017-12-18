@@ -1,15 +1,16 @@
 /**
  * 基于http请求辅助工具服务封装的逻辑层数据请求服务
  */
-commonService.service('httpService', ['$injector','$ocLazyLoad',function($injector,$ocLazyLoad) {
+commonService.service('httpService', ['$injector','$ocLazyLoad','httpHelper',function($injector,$ocLazyLoad,httpHelper) {
 	
 	/**
 	 * 手动注入httpHelper工具辅助服务
 	 */
-	var httpHelper;
-	$ocLazyLoad.load(['common/utils/common.utils.module.js','common/utils/httpHelper.js']).then(function(){
-		httpHelper = $injector.get("httpHelper");
-	});
+//	var httpHelper;
+//	$ocLazyLoad.load(['common/utils/common.utils.module.js','common/utils/httpHelper.js']).then(function(){
+//		httpHelper = $injector.get("httpHelper");
+//	});
+	
 	
 	// 定义通用状态码
 	var statusCode = {

@@ -1,7 +1,7 @@
 /**
  * http请求辅助工具服务
  */
-commonUtils.service('httpHelper', function($http) {
+commonUtils.service('httpHelper',['$http',function($http) {
 	// 发送GET请求
 	this.restGet = function(options) {
 		options.method = "GET";
@@ -80,4 +80,4 @@ commonUtils.service('httpHelper', function($http) {
 
 	}
 
-});
+}]);

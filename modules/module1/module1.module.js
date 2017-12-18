@@ -11,13 +11,17 @@ module1.config(function($stateProvider,$urlRouterProvider) {
 		templateUrl: 'modules/module1/module1.html',
 		controller:'module1Controller',
 		resolve: {
-            loadMyCtrl: ['$ocLazyLoad', function($ocLazyLoad){
-            	
-            	$ocLazyLoad.load('common/utils/stringHelper.js');
-            	//$ocLazyLoad.load('common/utils/httpHelper.js');
-            	$ocLazyLoad.load('common/service/httpService.js');
-            	
-                return $ocLazyLoad.load('modules/module1/module1.controller.js')
+			//加载模块工具类
+			loadMyUtils:['$ocLazyLoad',function($ocLazyLoad){
+				return $ocLazyLoad.load(['common/utils/httpHelper.js','common/utils/stringHelper.js']);
+			}],
+			//加载模块服务类
+			loadMyService:['$ocLazyLoad','loadMyUtils',function($ocLazyLoad,loadMyUtils){
+				return $ocLazyLoad.load('common/service/httpService.js');
+			}],
+			//加载模块控制器类
+            loadMyCtrl: ['$ocLazyLoad','loadMyUtils','loadMyService', function($ocLazyLoad,loadMyUtils,loadMyService){
+            	return $ocLazyLoad.load('modules/module1/module1.controller.js')
             }]
         }
 	})
