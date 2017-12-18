@@ -17,17 +17,16 @@ module1.controller('module1Controller', [ '$scope', "$state",'$injector','$ocLaz
 			};
 			
 			$scope.testString = function() {
-				console.log(stringHelper.isEmpty(""));
-				var result  = httpService.sendHttp({
-					url:"http://127.0.0.1:5000/rest/api/get"
-				});
-				console.log(result);
+				console.log("字符串比对："+stringHelper.isEmpty(""));
 			};
 			
-//			var httpHelper;
-//			$ocLazyLoad.load(['common/utils/common.utils.module.js','common/utils/httpHelper.js']).then(function(){
-//				httpHelper = $injector.get("httpHelper");//手动注入对象
-//			});
+			$scope.testHttpService = function(){
+				//链式调用
+				httpService.restGet("http://127.0.0.1:5000/rest/api/get").then(function(data){
+					console.log("http callback result:");
+					console.log(data);
+				});
+			}
 			
 			//测试GET请求
 			$scope.testGet = function() {
