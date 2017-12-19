@@ -7,7 +7,10 @@ module2.controller('module2Controller',
 				alert("my name is test of " + $scope.moduleName + ".");
 			};
 			
-			//测试ECMAScript6的语法
+			/**
+			 * 测试ECMAScript6的语法
+			 * 文档参考：http://www.jianshu.com/p/ebfeb687eb70
+			 */
 			$scope.testES6 = function(){
 				let name = "cpthack";//支持块级作用域
 				while(true){
